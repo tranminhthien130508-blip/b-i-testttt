@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cửa Hàng Của Tôi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Cửa Hàng của TMT</h1>
+        <div class="cart-icon">
+            🛒 Giỏ hàng (<span id="cart-count">0</span>)
+        </div>
+    </header>
+    <nav class="navbar">
+        <div class="logo"><a href="index.html">MyStore</a></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="products.html">Sản phẩm</a></li>
+            <li><a href="about.html">Giới thiệu</a></li>
+        </ul>
+        <div class="nav-cart">
+            🛒 Giỏ hàng (<span id="cart-count">0</span>)
+        </div>
+    </nav>
+
+    <main class="home-main">
+        <section class="hero">
+            <h1>Chào mừng đến với cửa hàng của chúng tôi!</h1>
+            <p>Nơi cung cấp những sản phẩm công nghệ, thẻ game và thời trang chất lượng nhất.</p>
+            <a href="products.html" class="btn-primary">Mua sắm ngay</a>
+        </section>
+    </main>
+
+    <main>
+        <section class="products" id="product-list">
+        </section>
+
+        <section class="cart-section">
+            <h2>Giỏ hàng của bạn</h2>
+            <ul id="cart-items">
+                <p class="empty-msg">Giỏ hàng trống</p>
+            </ul>
+            <hr>
+            <p class="total">Tổng cộng: <span id="cart-total">0</span> VNĐ</p>
+            <button id="checkout-btn">Thanh toán</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản Phẩm | Cửa Hàng</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><a href="index.html">MyStore</a></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="products.html" class="active">Sản phẩm</a></li>
+            <li><a href="about.html">Giới thiệu</a></li>
+        </ul>
+        <div class="nav-cart">
+            🛒 Giỏ hàng (<span id="cart-count">0</span>)
+        </div>
+    </nav>
+
+    <main class="products-layout">
+        <!-- Cột danh sách sản phẩm và bộ lọc -->
+        <div class="products-container">
+            <div class="filter-bar">
+                <label for="category">Lọc theo danh mục: </label>
+                <select id="category">
+                    <option value="all">Tất cả sản phẩm</option>
+                    <option value="game">Thẻ Game & Giải trí</option>
+                    <option value="tech">Đồ công nghệ</option>
+                    <option value="fashion">Thời trang</option>
+                </select>
+            </div>
+            
+            <section class="products" id="product-list">
+                <!-- JS sẽ in sản phẩm ra đây -->
+            </section>
+        </div>
+
+        <!-- Cột giỏ hàng -->
+        <aside class="cart-section">
+            <h2>Giỏ hàng của bạn</h2>
+            <ul id="cart-items">
+                <p class="empty-msg">Giỏ hàng trống</p>
+            </ul>
+            <hr>
+            <p class="total">Tổng: <span id="cart-total">0</span> VNĐ</p>
+            <button id="checkout-btn">Thanh toán</button>
+        </aside>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
