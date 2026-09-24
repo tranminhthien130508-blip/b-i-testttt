@@ -6,6 +6,24 @@
     <title>Sản Phẩm | Cửa Hàng</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
+<!-- Khu vực Pop-up Giỏ hàng -->
+    <div class="cart-overlay" id="cart-overlay">
+        <div class="cart-popup">
+            <div class="cart-header">
+                <h2>Giỏ hàng của bạn</h2>
+                <button class="close-cart" id="close-cart">&times;</button>
+            </div>
+            <ul id="popup-cart-items">
+                <!-- JS sẽ in sản phẩm trong Pop-up ra đây -->
+            </ul>
+            <hr>
+            <div class="cart-footer">
+                <p class="total">Tổng: <span id="popup-cart-total">0</span> VNĐ</p>
+                <button id="popup-checkout-btn">Thanh toán</button>
+            </div>
+        </div>
+    </div>
 <body>
     <nav class="navbar">
         <div class="logo"><a href="index.html">MyStore</a></div>
@@ -14,29 +32,36 @@
             <li><a href="products.html" class="active">Sản phẩm</a></li>
             <li><a href="about.html">Giới thiệu</a></li>
         </ul>
-        <div class="nav-cart">
-            🛒 Giỏ hàng (<span id="cart-count">0</span>)
+<div class="nav-cart" id="cart-icon-btn" style="cursor: pointer;">
+    🛒 Giỏ hàng (<span id="cart-count">0</span>)
+</div>
+</nav>
+
+
+    <div style="text-align: center; margin: 20px 0;">
+        <input type="text" id="search-input" placeholder="Tìm kiếm tên sản phẩm..." style="padding: 8px 12px; width: 300px; border: 1px solid #ccc; border-radius: 4px;">
+        <button id="search-btn" style="padding: 8px 15px; background-color: #1a1a2e; color: white; border: none; border-radius: 4px; cursor: pointer;">🔍</button>
+
+        
+        <div class="category-box">
+            <label for="category">Lọc danh mục: </label>
+            <select id="category">
+                <option value="all">Tất cả sản phẩm</option>
+                <option value="game">Thẻ Game & Giải trí</option>
+                <option value="tech">Đồ công nghệ</option>
+                <option value="phone">Điện thoại</option>
+                <option value="laptop">Laptop</option>
+                <option value="fashion">Thời trang</option>
+            </select>
         </div>
-    </nav>
+    </div>
 
     <main class="products-layout">
-        <!-- Cột danh sách sản phẩm và bộ lọc -->
         <div class="products-container">
-            <div class="filter-bar">
-                <label for="category">Lọc theo danh mục: </label>
-                <select id="category">
-                    <option value="all">Tất cả sản phẩm</option>
-                    <option value="game">Thẻ Game & Giải trí</option>
-                    <option value="tech">Đồ công nghệ</option>
-                    <option value="fashion">Thời trang</option>
-                </select>
-            </div>
             
             <section class="products" id="product-list">
-                <!-- JS sẽ in sản phẩm ra đây -->
             </section>
         </div>
-
         <!-- Cột giỏ hàng -->
         <aside class="cart-section">
             <h2>Giỏ hàng của bạn</h2>
