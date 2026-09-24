@@ -1,11 +1,14 @@
 
 const products = [
-    { id: 1, name: "Thẻ Steam Wallet 500K", price: 500000, category: "game", image: "https://via.placeholder.com/200x180/1a1a2e/FFFFFF/?text=Steam+Wallet" },
-    { id: 2, name: "Thẻ Roblox 800 Robux", price: 250000, category: "game", image: "https://via.placeholder.com/200x180/e74c3c/FFFFFF/?text=Roblox+Card" },
-    { id: 3, name: "Chuột Gaming Logitech", price: 650000, category: "tech", image: "https://via.placeholder.com/200x180/34495e/FFFFFF/?text=Chuot+Gaming" },
-    { id: 4, name: "Bàn phím cơ không dây", price: 850000, category: "tech", image: "https://via.placeholder.com/200x180/34495e/FFFFFF/?text=Ban+Phim+Co" },
-    { id: 5, name: "Áo khoác Hoodie", price: 350000, category: "fashion", image: "https://via.placeholder.com/200x180/95a5a6/FFFFFF/?text=Ao+Hoodie" },
-    { id: 6, name: "Balo thời trang", price: 400000, category: "fashion", image: "https://via.placeholder.com/200x180/95a5a6/FFFFFF/?text=Balo" }
+    { id: 1, name: "Thẻ Steam Wallet 75K", price: 75000, category: "game", image: "image\\img-loader.webp" },
+    { id: 2, name: "Thẻ Steam Wallet 500K", price: 500000, category: "game", image: "image\\z8267026093710_3d626401b280b5564e845d0b5bf86d95.jpg" },
+    { id: 3, name: "Thẻ Roblox 800 Robux", price: 250000, category: "game", image: "image\\z8266988891136_b6a99cbeaca5bca8ef8bff4aff5f4b49.jpg" },
+    { id: 4, name: "Chuột Gaming Logitech", price: 650000, category: "tech", image: "image\\z8266988899604_501e54ce648ee0f58646ff281b48fd02.jpg" },
+    { id: 5, name: "Bàn phím cơ không dây", price: 850000, category: "tech", image: "image\\z8266988900856_81150ce0c9d8993aa2c3b94fa9e36707.jpg" },
+    { id: 6, name: "Tai nghe Gaming Logitech Pro X 2 Lightspeed (Wireless/ Bluetooth/ 3.5mm)", price: 4649000, category: "tech", image: "image\\tai-nghe-gaming-logitech-pro-x-2-2.jpg" },
+    { id: 7, name: "Áo khoác Hoodie", price: 350000, category: "fashion", image: "image\\z8267018447892_1a793c0f81a5030b2f14e78213c49e1a.jpg" },
+    { id: 8, name: "Quần Baggy", price: 441000, category: "fashion", image: "image\\vn-11134211-23020-ndv8tc1rqsnv12.jpg" },
+    { id: 9, name: "Balo thời trang", price: 400000, category: "fashion", image: "image\\z8266988913600_23182f9ba2621ec1ca64caa211e46471.jpg" }
 ];
 
 let cart = JSON.parse(localStorage.getItem("myCart")) || [];
