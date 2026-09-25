@@ -25,19 +25,57 @@
         </div>
     </div>
 
-    <!-- Thanh Điều Hướng -->
-    <nav class="navbar">
-        <div class="logo"><a href="index.html">MyStore</a></div>
-        <ul class="nav-links">
-            <li><a href="index.html" class="active">Trang chủ</a></li>
-            <li><a href="products.html">Sản phẩm</a></li>
-            <li><a href="about.html">Giới thiệu</a></li>
-        </ul>
-        <div class="nav-cart" id="cart-icon-btn" style="cursor: pointer;">
-            🛒 Giỏ hàng (<span id="cart-count">0</span>)
+    <!-- BẮT ĐẦU HEADER CHUẨN SHOPEE -->
+    <header class="shopee-header">
+        <!-- Tầng trên: Các liên kết phụ -->
+        <div class="header-top">
+            <div class="header-links-left">
+                <a href="#">Kênh Người Bán</a>
+                <span class="divider">|</span>
+                <a href="#">Trở thành Người bán Shopee</a>
+                <span class="divider">|</span>
+                <a href="#">Tải ứng dụng</a>
+            </div>
+            <div class="header-links-right">
+                <a href="#">🔔 Thông Báo</a>
+                <a href="#">❓ Hỗ Trợ</a>
+                <a href="#">🌐 Tiếng Việt</a>
+                <span class="divider">|</span>
+                <a href="#" style="font-weight: bold;">Đăng Ký</a>
+                <span class="divider">|</span>
+                <a href="#" style="font-weight: bold;">Đăng Nhập</a>
+            </div>
         </div>
-    </nav>
 
+        <!-- Tầng chính: Logo, Tìm kiếm, Giỏ hàng -->
+        <div class="header-main">
+            <div class="logo">
+                <a href="index.html">🛍️ MyStore</a>
+            </div>
+            
+            <div class="search-container">
+                <div class="shopee-search-box">
+                    <input type="text" id="search-input" placeholder="Mystore bao ship 0Đ - Đăng ký ngay!">
+                    <button id="search-btn">🔍</button>
+                </div>
+                <div class="search-tags">
+                    <a href="products.html?category=all">Tất cả sản phẩm</a>
+                    <a href="products.html?category=game">Thẻ Game & Giải trí</a>
+                    <a href="products.html?category=tech">Đồ công nghệ</a>
+                    <a href="products.html?category=phone">Điện thoại</a>
+                    <a href="products.html?category=laptop">Laptop</a>
+                    <a href="products.html?category=fashion">Thời trang</a>
+                </div>
+            </div>
+
+            <div class="cart-icon-wrapper" id="cart-icon-btn">
+                <div class="cart-icon">
+                    🛒
+                    <span class="cart-badge" id="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
     <!-- Nội dung chính -->
     <main class="home-main">
         <section class="hero">
@@ -65,5 +103,7 @@
     </main>
 
     <script src="script.js"></script>
+    <!-- Chỗ chứa thông báo Toast -->
+    <div id="toast-container"></div>
 </body>
 </html>

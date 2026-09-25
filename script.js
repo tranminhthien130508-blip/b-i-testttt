@@ -31,7 +31,10 @@ const products = [
  * --------------------------------------------------------------------------
  */
 // Khởi tạo giỏ hàng từ localStorage để duy trì trạng thái khi chuyển trang
-let cart = JSON.parse(localStorage.getItem("myCart")) || [];
+let cart = (JSON.parse(localStorage.getItem("myCart")) || []).map(item => ({
+    ...item,
+    quantity: Number(item.quantity) > 0 ? Number(item.quantity) : 1
+}));
 
 function saveCartToLocalStorage() {
     localStorage.setItem("myCart", JSON.stringify(cart));
@@ -41,13 +44,28 @@ function addToCart(productId) {
     const product = products.find(p => p.id === productId);
     if (!product) return;
 
-    cart.push(product);
+    const existingItem = cart.find(item => item.id === productId);
+
+    if (existingItem) {
+        existingItem.quantity += 1;
+    } else {
+        cart.push({ ...product, quantity: 1 });
+    }
+
     saveCartToLocalStorage();
     refreshAllCartUIs();
 }
 
 function removeFromCart(index) {
-    cart.splice(index, 1);
+    const item = cart[index];
+    if (!item) return;
+
+    if (item.quantity > 1) {
+        item.quantity -= 1;
+    } else {
+        cart.splice(index, 1);
+    }
+
     saveCartToLocalStorage();
     refreshAllCartUIs();
 }
@@ -81,8 +99,9 @@ function refreshAllCartUIs() {
 }
 
 function updateNavbarCart() {
+    const totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
     const navCounts = document.querySelectorAll("#cart-count");
-    navCounts.forEach(el => el.innerText = cart.length);
+    navCounts.forEach(el => el.innerText = totalQuantity);
 }
 
 // Hàm dùng chung để render danh sách giỏ hàng (tránh lặp code)
@@ -99,12 +118,13 @@ function updateCartUI(listContainerId, totalContainerId) {
         cartItemsContainer.innerHTML = '<p class="empty-msg">Giỏ hàng trống</p>';
     } else {
         cart.forEach((item, index) => {
-            total += item.price;
+            const itemTotal = item.price * item.quantity;
+            total += itemTotal;
             const li = document.createElement("li");
             li.innerHTML = `
-                <span>${item.name}</span>
+                <span>${item.name} x${item.quantity}</span>
                 <div>
-                    <span class="price-highlight">${item.price.toLocaleString('vi-VN')} đ</span>
+                    <span class="price-highlight">${itemTotal.toLocaleString('vi-VN')} đ</span>
                     <button class="remove-btn" onclick="removeFromCart(${index})" title="Xóa sản phẩm">X</button>
                 </div>
             `;
@@ -141,9 +161,11 @@ function renderProducts() {
         productEl.className = "product-card";
         productEl.innerHTML = `
             <img src="${product.image}" alt="${product.name}" loading="lazy">
-            <h3>${product.name}</h3>
-            <p class="product-price">${product.price.toLocaleString('vi-VN')} đ</p>
-            <button onclick="addToCart(${product.id})">Thêm vào giỏ</button>
+            <div class="product-info-wrapper">
+                <h3>${product.name}</h3>
+                <p class="product-price">₫${product.price.toLocaleString('vi-VN')}</p>
+                <button onclick="addToCart(${product.id})">Thêm vào giỏ</button>
+            </div>
         `;
         productList.appendChild(productEl);
     });
@@ -155,13 +177,30 @@ function renderProducts() {
  * --------------------------------------------------------------------------
  */
 document.addEventListener("DOMContentLoaded", () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const categoryFromUrl = urlParams.get('category');
+    const categorySelect = document.getElementById("category");
+
+    if (categoryFromUrl && categorySelect) {
+        categorySelect.value = categoryFromUrl;
+    }
+
     // Khởi tạo UI ban đầu
     refreshAllCartUIs();
     renderProducts();
 
     // Bộ lọc & Tìm kiếm
-    document.getElementById("category")?.addEventListener("change", renderProducts);
-    document.getElementById("search-input")?.addEventListener("input", renderProducts);
+    if (categorySelect) {
+        categorySelect.addEventListener("change", renderProducts);
+    }
+
+    let debounceTimer;
+    document.getElementById("search-input")?.addEventListener("input", () => {
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(() => {
+            renderProducts();
+        }, 300);
+    });
 
     // Xử lý thanh toán
     document.getElementById("checkout-btn")?.addEventListener("click", handleCheckout);
