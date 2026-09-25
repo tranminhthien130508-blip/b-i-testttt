@@ -686,3 +686,179 @@ body {
 }
 
 .product-card button:hover { background-color: var(--shopee-orange-hover); }
+/* =========================================
+   7. TRANG KÊNH NGƯỜI BÁN (SELLER CENTER)
+   ========================================= */
+.seller-page {
+    background-color: #f6f6f6; /* Nền xám nhạt đặc trưng của Seller Center */
+}
+
+.seller-header {
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.seller-container {
+    display: flex;
+    max-width: 1400px;
+    margin: 20px auto;
+    padding: 0 2%;
+    gap: 20px;
+    min-height: 80vh;
+}
+
+/* Sidebar Menu */
+.seller-sidebar {
+    width: 250px;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    padding: 20px 0;
+    height: fit-content;
+}
+
+.seller-menu {
+    list-style: none;
+}
+
+.seller-menu li a {
+    display: block;
+    padding: 12px 20px;
+    color: #333;
+    font-size: 0.95rem;
+    transition: 0.2s;
+}
+
+.seller-menu li a:hover {
+    background-color: #fafafa;
+    color: var(--shopee-orange);
+}
+
+.seller-menu li.active a {
+    color: var(--shopee-orange);
+    font-weight: bold;
+    border-left: 4px solid var(--shopee-orange);
+    background-color: #fffaf9;
+}
+
+/* Main Content */
+.seller-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: hidden;
+}
+
+/* Thống kê */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.stat-card {
+    background: white;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.stat-card h3 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.stat-card p {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+/* Quản lý sản phẩm (Bảng) */
+.product-management {
+    background: white;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.pm-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.pm-header h2 {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.btn-add-product {
+    background: var(--shopee-orange);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.btn-add-product:hover {
+    background: var(--shopee-orange-hover);
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.seller-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.seller-table th, .seller-table td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    font-size: 0.95rem;
+}
+
+.seller-table th {
+    background-color: #fafafa;
+    color: #888;
+    font-weight: 500;
+}
+
+.seller-product-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.seller-product-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+
+.btn-edit {
+    color: #27ae60;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.btn-delete {
+    color: #e74c3c;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}

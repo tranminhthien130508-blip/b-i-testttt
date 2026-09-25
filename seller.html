@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kênh Người Bán | MyStore</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="seller-page">
+    <!-- Header dành riêng cho Kênh Người Bán -->
+    <header class="shopee-header seller-header">
+        <div class="header-main" style="padding: 15px 5%;">
+            <div class="logo">
+                <a href="index.html" style="font-size: 1.5rem;">🛍️ MyStore - Kênh Người Bán</a>
+            </div>
+            <div class="header-links-right" style="margin-left: auto;">
+                <span style="color: white; font-weight: 500; font-size: 1rem;">
+                    👤 Xin chào, Trần Minh Thiện
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Bố cục Dashboard (Sidebar + Main Content) -->
+    <div class="seller-container">
+        <!-- Menu bên trái -->
+        <aside class="seller-sidebar">
+            <ul class="seller-menu">
+                <li class="active"><a href="#">📊 Bảng Điều Khiển</a></li>
+                <li><a href="#">📦 Quản Lý Đơn Hàng</a></li>
+                <li><a href="#">🛍️ Quản Lý Sản Phẩm</a></li>
+                <li><a href="#">💰 Tài Chính</a></li>
+                <li><a href="#">⚙️ Thiết Lập Shop</a></li>
+                <li><a href="index.html" style="color: #666; margin-top: 20px;">⬅️ Quay lại cửa hàng</a></li>
+            </ul>
+        </aside>
+
+        <!-- Nội dung bên phải -->
+        <main class="seller-content">
+            <!-- Khu vực Thống kê nhanh -->
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <h3>15</h3>
+                    <p>Chờ Xác Nhận</p>
+                </div>
+                <div class="stat-card">
+                    <h3>12</h3>
+                    <p>Chờ Lấy Hàng</p>
+                </div>
+                <div class="stat-card">
+                    <h3>120</h3>
+                    <p>Đơn Đã Giao</p>
+                </div>
+                <div class="stat-card">
+                    <h3 style="color: var(--shopee-orange);">15.4M đ</h3>
+                    <p>Doanh Thu Tháng</p>
+                </div>
+            </section>
+
+            <!-- Khu vực Quản lý sản phẩm -->
+            <section class="product-management">
+                <div class="pm-header">
+                    <h2>Danh sách sản phẩm của tôi</h2>
+                    <button class="btn-add-product" onclick="alert('Chức năng thêm sản phẩm đang được cập nhật!')">+ Thêm 1 sản phẩm mới</button>
+                </div>
+                
+                <div class="table-responsive">
+                    <table class="seller-table">
+                        <thead>
+                            <tr>
+                                <th>Tên sản phẩm</th>
+                                <th>Phân loại</th>
+                                <th>Giá bán</th>
+                                <th>Kho hàng</th>
+                                <th>Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody id="seller-product-list">
+                            <!-- Javascript sẽ tự động in danh sách sản phẩm (từ mảng products) vào đây -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -7,22 +7,31 @@ const products = [
     { id: 1, name: "Apple iPhone 17", price: 27500000, category: "phone", image: "image\\images.jpg" },
     { id: 2, name: "Samsung Galaxy S26", price: 22500000, category: "phone", image: "image\\images (1).jpg" },
     { id: 3, name: "Xiaomi 15", price: 15399000, category: "phone", image: "image\\images (2).jpg" },
+    { id: 4, name: "Samsung Galaxy Z Fold 8 (Kế nhiệm Galaxy Z Fold 6)", price: 46000000, category: "phone", image: "image\\shopping (6).jpg" },
+    { id: 5, name: "OPPO Find X9 Ultra (Kế thừa dòng Find N3 / Find X)", price: 32500000, category: "phone", image: "image\\shopping (7).jpg" },
+    { id: 6, name: "vivo X300 Ultra", price: 35000000, category: "phone", image: "image\\images (6).jpg" },
 
-    { id: 4, name: "MSI Titan 18 HX", price: 130000000, category: "laptop", image: "image\\images (3).jpg" },
-    { id: 5, name: "ASUS ROG Strix SCAR 18", price: 120000000, category: "laptop", image: "image\\images (4).jpg" },
-    { id: 6, name: "Lenovo Legion 9i", price: 110000000, category: "laptop", image: "image\\images (5).jpg" },
+    { id: 7, name: "MSI Titan 18 HX", price: 130000000, category: "laptop", image: "image\\images (3).jpg" },
+    { id: 8, name: "ASUS ROG Strix SCAR 18", price: 120000000, category: "laptop", image: "image\\images (4).jpg" },
+    { id: 9, name: "Lenovo Legion 9i", price: 110000000, category: "laptop", image: "image\\images (5).jpg" },
+    { id: 10, name: "Alienware M18 R2 (2024)", price: 65000000, category: "laptop", image: "image\\shopping (3).jpg" },
+    { id: 11, name: "Razer Blade 18 (2025)", price: 115000000, category: "laptop", image: "image\\shopping (4).jpg" },
+    { id: 12, name: "Acer Predator Helios 18 AI (2026)", price: 169990000, category: "laptop", image: "image\\shopping (5).jpg" },
 
-    { id: 7, name: "Thẻ Steam Wallet 500K", price: 500000, category: "game", image: "image\\z8267026093710_3d626401b280b5564e845d0b5bf86d95.jpg" },
-    { id: 8, name: "Thẻ Steam Wallet 75K", price: 75000, category: "game", image: "image\\img-loader.webp" },
-    { id: 9, name: "Thẻ Roblox 800 Robux", price: 250000, category: "game", image: "image\\z8266988891136_b6a99cbeaca5bca8ef8bff4aff5f4b49.jpg" },
+    { id: 13, name: "Thẻ Steam Wallet 500K", price: 500000, category: "game", image: "image\\z8267026093710_3d626401b280b5564e845d0b5bf86d95.jpg" },
+    { id: 14, name: "Thẻ Steam Wallet 75K", price: 75000, category: "game", image: "image\\img-loader.webp" },
+    { id: 15, name: "Thẻ Roblox 800 Robux", price: 250000, category: "game", image: "image\\z8266988891136_b6a99cbeaca5bca8ef8bff4aff5f4b49.jpg" },
 
-    { id: 10, name: "Chuột Gaming Logitech", price: 650000, category: "tech", image: "image\\z8266988899604_501e54ce648ee0f58646ff281b48fd02.jpg" },
-    { id: 11, name: "Tai nghe Gaming Logitech", price: 700000, category: "tech", image: "image\\tai-nghe-gaming-logitech-pro-x-2-2.jpg" },
-    { id: 12, name: "Bàn phím cơ không dây", price: 850000, category: "tech", image: "image\\z8266988900856_81150ce0c9d8993aa2c3b94fa9e36707.jpg" },
+    { id: 16, name: "Chuột Gaming Logitech", price: 650000, category: "tech", image: "image\\z8266988899604_501e54ce648ee0f58646ff281b48fd02.jpg" },
+    { id: 17, name: "Tai nghe Gaming Logitech", price: 700000, category: "tech", image: "image\\tai-nghe-gaming-logitech-pro-x-2-2.jpg" },
+    { id: 18, name: "Bàn phím cơ không dây", price: 850000, category: "tech", image: "image\\z8266988900856_81150ce0c9d8993aa2c3b94fa9e36707.jpg" },
+    { id: 19, name: "Tivi LG OLED evo AI C5", price: 64890000, category: "tech", image: "image\\shopping.jpg" },
+    { id: 20, name: "Tủ Lạnh Samsung Family Hub 616L", price: 31590000, category: "tech", image: "image\\shopping (1).jpg" },
+    { id: 21, name: "Robot Hút Bụi Dreame X40 Ultra", price: 21900000, category: "tech", image: "image\\shopping (2).jpg" },
 
-    { id: 13, name: "Áo khoác Hoodie", price: 350000, category: "fashion", image: "image\\z8267018447892_1a793c0f81a5030b2f14e78213c49e1a.jpg" },
-    { id: 14, name: "Quần Baggy", price: 249000, category: "fashion", image: "image\\vn-11134211-23020-ndv8tc1rqsnv12.jpg" },
-    { id: 15, name: "Balo thời trang", price: 400000, category: "fashion", image: "image\\z8266988913600_23182f9ba2621ec1ca64caa211e46471.jpg" }
+    { id: 22, name: "Áo khoác Hoodie", price: 350000, category: "fashion", image: "image\\z8267018447892_1a793c0f81a5030b2f14e78213c49e1a.jpg" },
+    { id: 23, name: "Quần Baggy", price: 249000, category: "fashion", image: "image\\vn-11134211-23020-ndv8tc1rqsnv12.jpg" },
+    { id: 24, name: "Balo thời trang", price: 400000, category: "fashion", image: "image\\z8266988913600_23182f9ba2621ec1ca64caa211e46471.jpg" }
 ];
 
 /**
@@ -168,6 +177,38 @@ function renderProducts() {
             </div>
         `;
         productList.appendChild(productEl);
+    });
+}
+
+// HÀM HIỂN THỊ SẢN PHẨM TRÊN TRANG KÊNH NGƯỜI BÁN
+function renderSellerProducts() {
+    const sellerProductList = document.getElementById("seller-product-list");
+    if (!sellerProductList) return;
+
+    sellerProductList.innerHTML = "";
+
+    products.forEach((product) => {
+        const fakeStock = Math.floor(Math.random() * 100) + 10;
+
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+            <td>
+                <div class="seller-product-item">
+                    <img src="${product.image}" alt="${product.name}">
+                    <span style="font-weight: 500; color: #333;">${product.name}</span>
+                </div>
+            </td>
+            <td>${product.category.toUpperCase()}</td>
+            <td style="color: var(--shopee-orange); font-weight: bold;">
+                ₫${product.price.toLocaleString('vi-VN')}
+            </td>
+            <td>${fakeStock}</td>
+            <td>
+                <button class="btn-edit" onclick="alert('Tính năng Sửa đang cập nhật!')">Sửa</button>
+                <button class="btn-delete" onclick="alert('Tính năng Xóa đang cập nhật!')">Xóa</button>
+            </td>
+        `;
+        sellerProductList.appendChild(tr);
     });
 }
 
