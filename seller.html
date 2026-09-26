@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="seller-page">
-    <!-- Header dành riêng cho Kênh Người Bán -->
     <header class="shopee-header seller-header">
         <div class="header-main" style="padding: 15px 5%;">
             <div class="logo">
@@ -21,9 +20,7 @@
         </div>
     </header>
 
-    <!-- Bố cục Dashboard (Sidebar + Main Content) -->
     <div class="seller-container">
-        <!-- Menu bên trái -->
         <aside class="seller-sidebar">
             <ul class="seller-menu">
                 <li class="active"><a href="#">📊 Bảng Điều Khiển</a></li>
@@ -35,9 +32,7 @@
             </ul>
         </aside>
 
-        <!-- Nội dung bên phải -->
         <main class="seller-content">
-            <!-- Khu vực Thống kê nhanh -->
             <section class="stats-grid">
                 <div class="stat-card">
                     <h3>15</h3>
@@ -57,7 +52,6 @@
                 </div>
             </section>
 
-            <!-- Khu vực Quản lý sản phẩm -->
             <section class="product-management">
                 <div class="pm-header">
                     <h2>Danh sách sản phẩm của tôi</h2>
@@ -76,7 +70,6 @@
                             </tr>
                         </thead>
                         <tbody id="seller-product-list">
-                            <!-- Javascript sẽ tự động in danh sách sản phẩm (từ mảng products) vào đây -->
                         </tbody>
                     </table>
                 </div>
@@ -86,10 +79,8 @@
 
     <script src="script.js"></script>
 </body>
-<!-- BẮT ĐẦU FOOTER CHUẨN SHOPEE -->
     <footer class="shopee-footer">
         <div class="footer-container">
-            <!-- Cột 1 -->
             <div class="footer-col">
                 <h4>CHĂM SÓC KHÁCH HÀNG</h4>
                 <ul>
@@ -101,7 +92,6 @@
                 </ul>
             </div>
             
-            <!-- Cột 2 -->
             <div class="footer-col">
                 <h4>VỀ MYSTORE</h4>
                 <ul>
@@ -113,7 +103,6 @@
                 </ul>
             </div>
             
-            <!-- Cột 3 -->
             <div class="footer-col">
                 <h4>THANH TOÁN</h4>
                 <div class="payment-icons">
@@ -123,7 +112,6 @@
                 </div>
             </div>
             
-            <!-- Cột 4 -->
             <div class="footer-col">
                 <h4>THEO DÕI CHÚNG TÔI TRÊN</h4>
                 <ul>
@@ -134,10 +122,8 @@
             </div>
         </div>
         
-        <!-- Phần bản quyền -->
         <div class="footer-bottom">
             <p>&copy; 2026 MyStore - Lập trình & Phát triển bởi Trần Minh Thiện. Tất cả các quyền được bảo lưu.</p>
         </div>
     </footer>
-    <!-- KẾT THÚC FOOTER -->
 </html>

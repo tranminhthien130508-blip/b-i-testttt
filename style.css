@@ -1,6 +1,6 @@
-/* =========================================
-   1. BIẾN CƠ SỞ & RESET
-   ========================================= */
+/*
+1. BIẾN CƠ SỞ & RESET
+*/
 :root {
     --primary-color: #e94560;
     --primary-hover: #d13d56;
@@ -29,9 +29,9 @@ a {
     color: inherit;
 }
 
-/* =========================================
-   2. TRANG CHỦ & GIỚI THIỆU
-   ========================================= */
+/*
+2. TRANG CHỦ & GIỚI THIỆU
+*/
 .home-main, .about-main {
     padding: 4rem 5%;
     text-align: center;
@@ -75,9 +75,9 @@ a {
     margin-left: 1.5rem;
 }
 
-/* =========================================
-   3. LAYOUT SẢN PHẨM & BỘ LỌC
-   ========================================= */
+/*
+3. LAYOUT SẢN PHẨM & BỘ LỌC
+*/
 .products-layout {
     display: flex;
     gap: 2rem;
@@ -105,9 +105,9 @@ a {
     outline: none;
 }
 
-/* =========================================
-   4. CARD SẢN PHẨM
-   ========================================= */
+/*
+4. CARD SẢN PHẨM
+*/
 .products {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -177,9 +177,9 @@ a {
     padding: 2rem;
 }
 
-/* =========================================
-   5. GIỎ HÀNG (SIDEBAR & POP-UP)
-   ========================================= */
+/*
+5. GIỎ HÀNG (SIDEBAR & POP-UP)
+*/
 .cart-section {
     flex: 1;
     background: #fff;
@@ -256,7 +256,6 @@ a {
     background-color: var(--primary-hover);
 }
 
-/* POP-UP OVERLAY */
 .cart-overlay {
     position: fixed;
     top: 0;
@@ -335,46 +334,46 @@ a {
 }
 @media (max-width: 800px) {
     .products-layout {
-        flex-direction: column; /* Chuyển thành cột dọc trên điện thoại */
+        flex-direction: column; 
     }
     
     .products-container, .cart-section {
-        width: 100%; /* Cả hai chiếm 100% chiều rộng */
+        width: 100%; 
     }
     
     .cart-section {
-        position: static; /* Tắt sticky trên mobile để cuộn trang tự nhiên */
+        position: static; 
     }
 }
-/* =========================================
-   6. CẬP NHẬT BIẾN CƠ SỞ (Màu sắc nhã nhặn hơn)
-   ========================================= */
+/*
+6. CẬP NHẬT BIẾN CƠ SỞ 
+*/
 :root {
-    --primary-color: #ff4757; /* Đỏ hồng hiện đại hơn */
+    --primary-color: #ff4757;
     --primary-hover: #ff6b81;
-    --nav-bg: #2f3542;       /* Xám đen thay vì xanh dương đậm */
+    --nav-bg: #2f3542;      
     --nav-cart-bg: #57606f;
-    --bg-color: #f1f2f6;     /* Xám sáng, dịu mắt */
+    --bg-color: #f1f2f6;    
     --text-color: #2f3542;
     --danger-color: #ff4757;
-    --border-radius: 12px;   /* Bo góc tròn hơn (xu hướng hiện đại) */
-    --card-shadow: 0 10px 20px rgba(0,0,0,0.05); /* Bóng đổ mềm */
+    --border-radius: 12px;   
+    --card-shadow: 0 10px 20px rgba(0,0,0,0.05); 
     --card-shadow-hover: 0 15px 30px rgba(0,0,0,0.1);
 }
 
-/* =========================================
-   7. CẢI THIỆN CARD SẢN PHẨM (UI sang hơn)
-   ========================================= */
+/*
+7. CẢI THIỆN CARD SẢN PHẨM
+ */
 .product-card {
     background: #fff;
     padding: 1.5rem;
     border-radius: var(--border-radius);
     box-shadow: var(--card-shadow);
     text-align: center;
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* Hiệu ứng mượt hơn */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     display: flex;
     flex-direction: column;
-    border: 1px solid transparent; /* Chuẩn bị cho hover */
+    border: 1px solid transparent;
 }
 
 .product-card:hover {
@@ -385,10 +384,10 @@ a {
 
 .product-card img {
     width: 100%;
-    height: 200px; /* Cố định chiều cao, giúp các ảnh đều nhau */
-    object-fit: contain; /* Không bị cắt xén ảnh, viền trắng tự nhiên */
+    height: 200px;
+    object-fit: contain;
     margin-bottom: 1.5rem;
-    background-color: #fff; /* Nền trắng cho ảnh */
+    background-color: #fff; 
     padding: 10px;
     border-radius: 8px;
 }
@@ -399,10 +398,10 @@ a {
     border: 2px solid var(--primary-color);
     padding: 0.8rem;
     cursor: pointer;
-    border-radius: 8px; /* Nút bo góc vừa phải */
+    border-radius: 8px; 
     font-weight: 600;
     transition: all 0.3s ease;
-    margin-top: auto; /* Đẩy nút xuống dưới cùng */
+    margin-top: auto; 
 }
 
 .product-card button:hover {
@@ -410,9 +409,9 @@ a {
     color: white;
 }
 
-/* =========================================
-   8.TOAST NOTIFICATION (Hiệu ứng thêm vào giỏ)
-   ========================================= */
+/*
+8.TOAST NOTIFICATION
+*/
 #toast-container {
     position: fixed;
     bottom: 20px;
@@ -429,8 +428,8 @@ a {
     padding: 15px 25px;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    border-left: 4px solid #2ed573; /* Viền xanh báo thành công */
-    transform: translateX(100%); /* Trượt từ phải vào */
+    border-left: 4px solid #2ed573; 
+    transform: translateX(100%);
     opacity: 0;
     animation: slideIn 0.4s forwards, slideOut 0.4s forwards 2.5s;
     font-weight: 500;
@@ -446,7 +445,7 @@ a {
 @keyframes slideOut {
     to { transform: translateX(120%); opacity: 0; }
 }
-/* CSS Cho thanh tìm kiếm mới */
+
 .search-filter-section {
     max-width: 1400px;
     margin: 2rem auto 0;
@@ -468,7 +467,7 @@ a {
     flex: 1;
     padding: 12px 20px;
     border: 1px solid #dcdde1;
-    border-radius: 25px 0 0 25px; /* Bo tròn mạnh ở mép ngoài */
+    border-radius: 25px 0 0 25px; 
     outline: none;
     font-size: 1rem;
     transition: 0.3s;
@@ -489,7 +488,7 @@ a {
 
 .search-box button:hover { background: var(--primary-hover); }
 
-/* Điều chỉnh select lọc */
+
 .category-box select {
     padding: 12px;
     border: 1px solid #dcdde1;
@@ -499,7 +498,7 @@ a {
     cursor: pointer;
 }
 
-/* 1. CẬP NHẬT BIẾN MÀU THEO SHOPEE */
+
 :root {
     --shopee-orange: #ee4d2d;
     --shopee-orange-hover: #f05d40;
@@ -515,7 +514,7 @@ body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-/* 2. STYLE CHO HEADER SHOPEE */
+
 .shopee-header {
     background: var(--shopee-gradient);
     color: white;
@@ -553,7 +552,7 @@ body {
     color: white;
 }
 
-/* 3. THANH TÌM KIẾM CHUẨN SHOPEE */
+/* 3. THANH TÌM KIẾM mới */
 .search-container {
     flex: 1;
     display: flex;
@@ -600,7 +599,7 @@ body {
     color: rgba(255, 255, 255, 0.9);
 }
 
-/* 4. ICON GIỎ HÀNG SHOPEE */
+/* 4. ICON GIỎ HÀNG mới */
 .cart-icon-wrapper {
     cursor: pointer;
     padding: 10px;
@@ -621,7 +620,6 @@ body {
     font-weight: bold;
 }
 
-/* 5. ÉP PRODUCT CARD GIỐNG SHOPEE */
 .products {
     grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
     gap: 10px;
@@ -686,9 +684,9 @@ body {
 }
 
 .product-card button:hover { background-color: var(--shopee-orange-hover); }
-/* =========================================
-   7. TRANG KÊNH NGƯỜI BÁN (SELLER CENTER)
-   ========================================= */
+/*
+6. TRANG KÊNH NGƯỜI BÁN 
+ */
 .seller-page {
     background-color: #f6f6f6; /* Nền xám nhạt đặc trưng của Seller Center */
 }
@@ -706,7 +704,6 @@ body {
     min-height: 80vh;
 }
 
-/* Sidebar Menu */
 .seller-sidebar {
     width: 250px;
     background: white;
@@ -740,7 +737,6 @@ body {
     background-color: #fffaf9;
 }
 
-/* Main Content */
 .seller-content {
     flex: 1;
     display: flex;
@@ -749,7 +745,6 @@ body {
     overflow: hidden;
 }
 
-/* Thống kê */
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -775,7 +770,6 @@ body {
     font-size: 0.9rem;
 }
 
-/* Quản lý sản phẩm (Bảng) */
 .product-management {
     background: white;
     padding: 20px;
@@ -862,9 +856,9 @@ body {
     cursor: pointer;
     font-weight: bold;
 }
-/* =========================================
-   9. TRANG HỒ SƠ & GIỚI THIỆU (PROFILE PAGE)
-   ========================================= */
+/*
+9. TRANG HỒ SƠ & GIỚI THIỆU
+*/
 .profile-page {
     background-color: var(--bg-color);
 }
@@ -885,7 +879,7 @@ body {
     padding: 30px;
 }
 
-/* Cột thông tin cá nhân (Trái) */
+
 .profile-sidebar {
     flex: 1;
     min-width: 320px;
@@ -952,7 +946,7 @@ body {
     color: #444;
 }
 
-/* Cột thông tin dự án (Phải) */
+
 .profile-content {
     flex: 2;
 }
@@ -1020,7 +1014,7 @@ body {
     list-style-type: square;
 }
 
-/* Responsive cho trang Profile */
+
 @media (max-width: 850px) {
     .profile-container {
         flex-direction: column;
@@ -1029,12 +1023,12 @@ body {
         width: 100%;
     }
 }
-/* =========================================
-   10. FOOTER (CHÂN TRANG)
-   ========================================= */
+/*
+10. FOOTER 
+*/
 .shopee-footer {
     background-color: #fbfbfb;
-    border-top: 4px solid var(--shopee-orange); /* Đường viền cam đặc trưng */
+    border-top: 4px solid var(--shopee-orange); 
     padding: 40px 5% 0;
     color: rgba(0,0,0,.54);
     font-size: 0.85rem;
@@ -1102,5 +1096,5 @@ body {
     font-size: 0.85rem;
     color: rgba(0,0,0,.54);
     background-color: #f5f5f5;
-    margin: 0 -5.5%; /* Kéo dài nền xám ra sát mép màn hình */
+    margin: 0 -5.5%; 
 }

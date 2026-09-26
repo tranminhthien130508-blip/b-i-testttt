@@ -1,8 +1,6 @@
-/**
- * --------------------------------------------------------------------------
- * 1. DỮ LIỆU SẢN PHẨM (MOCK DATA)
- * --------------------------------------------------------------------------
- */
+/*
+ 1. DỮ LIỆU SẢN PHẨM 
+*/
 const products = [
     { id: 1, name: "Apple iPhone 17", price: 27500000, category: "phone", image: "image\\images.jpg" },
     { id: 2, name: "Samsung Galaxy S26", price: 22500000, category: "phone", image: "image\\images (1).jpg" },
@@ -34,12 +32,9 @@ const products = [
     { id: 24, name: "Balo thời trang", price: 400000, category: "fashion", image: "image\\z8266988913600_23182f9ba2621ec1ca64caa211e46471.jpg" }
 ];
 
-/**
- * --------------------------------------------------------------------------
- * 2. QUẢN LÝ TRẠNG THÁI (STATE MANAGEMENT)
- * --------------------------------------------------------------------------
+/*
+ 2. QUẢN LÝ TRẠNG THÁI 
  */
-// Khởi tạo giỏ hàng từ localStorage để duy trì trạng thái khi chuyển trang
 let cart = (JSON.parse(localStorage.getItem("myCart")) || []).map(item => ({
     ...item,
     quantity: Number(item.quantity) > 0 ? Number(item.quantity) : 1
@@ -94,17 +89,14 @@ function handleCheckout() {
     if (cartOverlay) cartOverlay.classList.remove("active");
 }
 
-/**
- * --------------------------------------------------------------------------
- * 3. XỬ LÝ GIAO DIỆN (UI RENDERING)
- * --------------------------------------------------------------------------
+/*
+  3. XỬ LÝ GIAO DIỆN 
  */
 
-// Cập nhật tất cả các UI liên quan đến giỏ hàng cùng một lúc
 function refreshAllCartUIs() {
     updateNavbarCart();
-    updateCartUI("cart-items", "cart-total");             // Sidebar
-    updateCartUI("popup-cart-items", "popup-cart-total"); // Popup
+    updateCartUI("cart-items", "cart-total");             
+    updateCartUI("popup-cart-items", "popup-cart-total"); 
 }
 
 function updateNavbarCart() {
@@ -113,7 +105,6 @@ function updateNavbarCart() {
     navCounts.forEach(el => el.innerText = totalQuantity);
 }
 
-// Hàm dùng chung để render danh sách giỏ hàng (tránh lặp code)
 function updateCartUI(listContainerId, totalContainerId) {
     const cartItemsContainer = document.getElementById(listContainerId);
     const cartTotalContainer = document.getElementById(totalContainerId);
@@ -143,7 +134,6 @@ function updateCartUI(listContainerId, totalContainerId) {
     cartTotalContainer.innerText = total.toLocaleString('vi-VN');
 }
 
-// Hiển thị và lọc sản phẩm (Kết hợp Tìm kiếm và Danh mục)
 function renderProducts() {
     const productList = document.getElementById("product-list");
     if (!productList) return;
@@ -153,7 +143,6 @@ function renderProducts() {
     const categoryFilter = document.getElementById("category")?.value || "all";
     const searchInput = document.getElementById("search-input")?.value.toLowerCase().trim() || "";
 
-    // Lọc mảng sản phẩm
     let filteredProducts = products.filter(p => {
         const matchCategory = categoryFilter === "all" || p.category === categoryFilter;
         const matchSearch = p.name.toLowerCase().includes(searchInput);
@@ -180,7 +169,6 @@ function renderProducts() {
     });
 }
 
-// HÀM HIỂN THỊ SẢN PHẨM TRÊN TRANG KÊNH NGƯỜI BÁN
 function renderSellerProducts() {
     const sellerProductList = document.getElementById("seller-product-list");
     if (!sellerProductList) return;
@@ -212,11 +200,9 @@ function renderSellerProducts() {
     });
 }
 
-/**
- * --------------------------------------------------------------------------
- * 4. LẮNG NGHE SỰ KIỆN (EVENT LISTENERS)
- * --------------------------------------------------------------------------
- */
+/*
+4. LẮNG NGHE SỰ KIỆN
+*/
 document.addEventListener("DOMContentLoaded", () => {
     const urlParams = new URLSearchParams(window.location.search);
     const categoryFromUrl = urlParams.get('category');
@@ -226,11 +212,9 @@ document.addEventListener("DOMContentLoaded", () => {
         categorySelect.value = categoryFromUrl;
     }
 
-    // Khởi tạo UI ban đầu
     refreshAllCartUIs();
     renderProducts();
 
-    // Bộ lọc & Tìm kiếm
     if (categorySelect) {
         categorySelect.addEventListener("change", renderProducts);
     }
@@ -243,11 +227,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 300);
     });
 
-    // Xử lý thanh toán
     document.getElementById("checkout-btn")?.addEventListener("click", handleCheckout);
     document.getElementById("popup-checkout-btn")?.addEventListener("click", handleCheckout);
 
-    // Đóng/Mở Popup Giỏ hàng
     const cartOverlay = document.getElementById("cart-overlay");
     document.getElementById("cart-icon-btn")?.addEventListener("click", () => {
         cartOverlay?.classList.add("active");
@@ -256,7 +238,6 @@ document.addEventListener("DOMContentLoaded", () => {
         cartOverlay?.classList.remove("active");
     });
 
-    // Đóng popup khi click ra ngoài vùng giỏ hàng
     cartOverlay?.addEventListener("click", (e) => {
         if (e.target === cartOverlay) cartOverlay.classList.remove("active");
     });
