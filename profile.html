@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hồ Sơ Nhà Phát Triển | MyStore</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="profile-page">
+    <!-- Header chuẩn Shopee -->
+    <header class="shopee-header">
+        <div class="header-top">
+            <div class="header-links-left">
+                <a href="seller.html">Kênh Người Bán</a>
+                <span class="divider">|</span>
+                <a href="index.html">Trang chủ cửa hàng</a>
+            </div>
+            <div class="header-links-right">
+                <a href="#">🔔 Thông Báo</a>
+                <a href="#">❓ Hỗ Trợ</a>
+                <span class="divider">|</span>
+                <a href="profile.html" style="font-weight: bold;">👤 Xin chào, Trần Minh Thiện</a>
+            </div>
+        </div>
+        <div class="header-main" style="padding: 15px 5%;">
+            <div class="logo">
+                <a href="index.html">🛍️ MyStore - Hồ Sơ</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Nội dung trang cá nhân -->
+    <main class="profile-container">
+        <!-- Cột bên trái: Thông tin cá nhân -->
+        <aside class="profile-sidebar">
+            <div class="profile-card user-bio">
+                <div class="avatar-placeholder">
+                    <span class="avatar-text">MT</span>
+                </div>
+                <h2>Trần Minh Thiện</h2>
+                <p class="tagline">Lập trình viên Front-end & Đam mê Công nghệ</p>
+                
+                <hr class="profile-divider">
+                
+                <div class="bio-details">
+                    <p>🎓 <strong>Học vấn:</strong> Học sinh lớp 12A1, Trường THPT Long Thới.</p>
+                    <p>💻 <strong>Kỹ năng:</strong> HTML, CSS, JavaScript, Python, Firebase.</p>
+                    <p>🎓 <strong>Đào tạo:</strong> Từng rèn luyện kỹ năng tại MindX Technology School.</p>
+                    <p>🎮 <strong>Sở thích:</strong> Chơi Genshin Impact, Roblox, Minecraft. Thích nghe nhạc trên Spotify và là một "tín đồ" thực thụ của gà rán (KFC, Five Star)!</p>
+                </div>
+
+                <hr class="profile-divider">
+
+                <h3>Liên hệ với tôi</h3>
+                <ul class="contact-list">
+                    <li>📧 <strong>Email:</strong> minhthien.dev@example.com</li>
+                    <li>📞 <strong>Điện thoại:</strong> 098x xxx xxx</li>
+                    <li>🌐 <strong>Github:</strong> github.com/minhthien-dev</li>
+                    <li>📘 <strong>Facebook:</strong> fb.com/minhthien.profile</li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Cột bên phải: Giới thiệu dự án -->
+        <section class="profile-content">
+            <div class="profile-card project-details">
+                <div class="project-header">
+                    <h2>Về Dự Án MyStore</h2>
+                    <span class="status-badge">Hoàn thiện 1.0</span>
+                </div>
+                <p class="project-intro">
+                    <strong>MyStore</strong> là một dự án thương mại điện tử cá nhân được xây dựng với mục đích thực hành và tối ưu hóa trải nghiệm người dùng (UX/UI). Giao diện được lấy cảm hứng mạnh mẽ từ Shopee, mang lại cảm giác thân thuộc cho người mua sắm tại Việt Nam.
+                </p>
+
+                <div class="tech-stack">
+                    <h3>Kiến trúc & Công nghệ</h3>
+                    <div class="tech-tags">
+                        <span>HTML5</span>
+                        <span>CSS3 (Vanilla)</span>
+                        <span>JavaScript (ES6)</span>
+                        <span>LocalStorage API</span>
+                    </div>
+                    <ul class="tech-features">
+                        <li><strong>Không dùng Framework:</strong> Toàn bộ mã nguồn (giao diện, logic) được viết thuần, giúp trang web load siêu nhẹ và dễ dàng kiểm soát DOM.</li>
+                        <li><strong>Quản lý trạng thái thông minh:</strong> Giỏ hàng được lưu trữ qua `LocalStorage`, không bị mất dữ liệu khi người dùng chuyển trang hoặc làm mới trình duyệt.</li>
+                        <li><strong>Live Search (Debounce):</strong> Thuật toán Debounce 300ms giúp tối ưu hóa ô tìm kiếm, không làm lag trình duyệt khi người dùng gõ phím nhanh.</li>
+                        <li><strong>Toast Notification:</strong> Hệ thống thông báo góc màn hình tự động xuất hiện và ẩn đi thay thế cho hàm `alert()` khô khan mặc định.</li>
+                    </ul>
+                </div>
+
+                <div class="future-plans">
+                    <h3>Định hướng phát triển</h3>
+                    <ul>
+                        <li>Tích hợp Firebase Realtime Database để lưu trữ dữ liệu sản phẩm thay vì hardcode mảng JSON.</li>
+                        <li>Xây dựng trang thanh toán (Checkout) chi tiết với biểu mẫu điền thông tin giao hàng.</li>
+                        <li>Thêm tính năng đăng nhập/đăng ký cho người dùng thật.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+    <footer class="shopee-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>CHĂM SÓC KHÁCH HÀNG</h4>
+                <ul>
+                    <li><a href="#">Trung Tâm Trợ Giúp</a></li>
+                    <li><a href="#">MyStore Blog</a></li>
+                    <li><a href="#">Hướng Dẫn Mua Hàng</a></li>
+                    <li><a href="#">Thanh Toán</a></li>
+                    <li><a href="#">Vận Chuyển</a></li>
+                </ul>
+            </div>
+            
+
+            <div class="footer-col">
+                <h4>VỀ MYSTORE</h4>
+                <ul>
+                    <li><a href="about.html">Giới thiệu về MyStore</a></li>
+                    <li><a href="#">Tuyển Dụng</a></li>
+                    <li><a href="#">Điều Khoản Cửa Hàng</a></li>
+                    <li><a href="#">Chính Sách Bảo Mật</a></li>
+                    <li><a href="seller.html">Kênh Người Bán</a></li>
+                </ul>
+            </div>
+     
+            <div class="footer-col">
+                <h4>THANH TOÁN</h4>
+                <div class="payment-icons">
+                    <span class="pay-icon">💳 Visa / Master</span>
+                    <span class="pay-icon">🏧 Thẻ ATM</span>
+                    <span class="pay-icon">💵 Nhận hàng thanh toán (COD)</span>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h4>THEO DÕI CHÚNG TÔI TRÊN</h4>
+                <ul>
+                    <li><a href="#">📘 Facebook</a></li>
+                    <li><a href="#">📸 Instagram</a></li>
+                    <li><a href="#">💼 LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MyStore - Lập trình & Phát triển bởi Trần Minh Thiện. Tất cả các quyền được bảo lưu.</p>
+        </div>
+    </footer>
+</html>
